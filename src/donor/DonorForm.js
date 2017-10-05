@@ -31,9 +31,9 @@ class DonorForm extends Component {
 	  'Access-Control-Allow-Origin': '*',
 	},
 		  data: {
-		  	email: 'sas',
-		  	password: 'sfsdfs',
-		    name: 'Fred'
+		  	email: this.email.value,
+		  	password: this.password.value,
+		    name: this.name.value
 		  }
 		});
 
