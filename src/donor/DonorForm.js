@@ -6,11 +6,6 @@ class DonorForm extends Component {
 
 
 	register(){
-	const formData = new FormData();
-    formData.append('email', this.email.value);
-    formData.append('password', this.password.value);
-    formData.append('name', this.name.value);
-
 		// fetch("http://localhost:3001/donors", {
 		//    method: "POST",
 		//    // headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
@@ -27,7 +22,7 @@ class DonorForm extends Component {
 		axios({
 		  method: 'post',
 		  url: 'http://localhost:3001/donors',
-		  	headers: {
+		  headers: {
 	  'Access-Control-Allow-Origin': '*',
 	},
 		  data: {
@@ -37,6 +32,10 @@ class DonorForm extends Component {
 		  }
 		});
 
+
+		this.email.value = "";
+		this.password.value = "";
+		this.name.value = "";
 	}
 
   render() {
