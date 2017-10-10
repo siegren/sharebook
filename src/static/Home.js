@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DonorForm from '../donor/DonorForm';
 import { Link, Redirect } from 'react-router-dom';
+import Login from '../authentication/Login.js';
 
 
 
@@ -27,7 +28,7 @@ class Home extends Component {
     	<div>
     <button onClick = {() => this.gotoLink() }>sample</button>
     		<Link to='/about' >About</Link>
-	      <DonorForm />
+	      <Login />
 	    </div>
     );
   }
